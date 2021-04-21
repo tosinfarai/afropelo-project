@@ -6,3 +6,6 @@ class Product(models.Model):
     image = models.ImageField(upload_to='store/images/')
     description = models.TextField()
     ingredients = models.TextField(default='SOME STRING')
+
+    def __str__(self):
+        return self.name

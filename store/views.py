@@ -11,3 +11,9 @@ def shop(request):
 def detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     return render(request, 'store/detail.html', {'product': product})
+
+def about(request):
+    return render(request, 'store/about.html')
+
+def contact(request):
+    return render(request, 'store/contact.html')

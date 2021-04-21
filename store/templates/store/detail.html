@@ -1,1 +1,14 @@
-{{ product.name }}
+{% extends 'store/home.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+      <h1>{{ product.name }}</h1>
+      <p>{{ product.price }}</p>
+      <br><img src="{{ product.image.url }}">
+      <br><p>{{ product.description }}</p>
+      <br><p>{{ product.ingredients }}</p>
+    </div>
+
+{% endblock %}
