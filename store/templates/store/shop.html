@@ -3,15 +3,19 @@
 {% block content %}
 
     <div class="container">
-      <h1>Shop Afropelo Products!</h1>
+      <h1 class="mt-5">Shop Afropelo Products!</h1>
+      <hr>
+      <div class="row">
+        {% for product in products %}
+        <div class="col-lg-4 col-md-6">
 
-      {% for product in products %}
+          <img src="{{ product.image.url }}" class="img-fluid mb-2">
+          <a href="{% url 'store:detail' product.id %}"><h5>{{ product.name }}</h5></a>
+          <p>{{ product.price }} NGN</p>
 
-      <a href="{% url 'store:detail' product.id %}"><h2>{{ product.name }}</h2></a>
-      <br><img src="{{ product.image.url }}">
-      <br><h3>{{ product.price }} NGN</h3>
-
-      {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
     </div>
 
 {% endblock %}
