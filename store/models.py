@@ -5,7 +5,7 @@ class Product(models.Model):
     price = models.IntegerField(default=0)
     image = models.ImageField(upload_to='store/images/')
     description = models.TextField()
-    ingredients = models.TextField(default='SOME STRING')
+    ingredients = models.TextField(default='')
 
     def __str__(self):
         return self.name

@@ -6,9 +6,20 @@
     <div class="container">
       <h1>{{ product.name }}</h1>
       <p>{{ product.price }}</p>
-      <br><img src="{{ product.image.url }}">
-      <br><p>{{ product.description }}</p>
-      <br><p>{{ product.ingredients }}</p>
+      <br><img src="{{ product.image.url }}" style="width: 648px; height: 810px; object-fit: contain;">
+
+      <div class="container">
+        <h3 class="mt-5">Product Details</h3>
+        <hr>
+        <p>{{ product.description }}</p>
+      </div>
+
+      <div class="container">
+        <h3 class="mt-5">Ingredients</h3>
+        <hr>
+        <p>{{ product.ingredients }}</p>
+      </div>
+
     </div>
 
 {% endblock %}

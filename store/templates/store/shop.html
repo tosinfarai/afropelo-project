@@ -8,9 +8,10 @@
       <div class="row">
         {% for product in products %}
         <div class="col-lg-4 col-md-6">
-
-          <img src="{{ product.image.url }}" class="img-fluid mb-2">
-          <a href="{% url 'store:detail' product.id %}"><h5>{{ product.name }}</h5></a>
+          <a href="{% url 'store:detail' product.id %}">
+            <img src="{{ product.image.url }}" class="img-fluid mb-2" style="width: 324px; height: 405px; object-fit: contain;">
+            <h5>{{ product.name }}</h5>
+          </a>
           <p>{{ product.price }} NGN</p>
 
         </div>
