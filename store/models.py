@@ -8,6 +8,7 @@ class Product(models.Model):
     image = CloudinaryField('image')
     description = models.TextField()
     ingredients = models.TextField(default='')
+    created = models.DateTimeField()
 
     def __str__(self):
-        return self.name
+        return self.name.order_by('created')
